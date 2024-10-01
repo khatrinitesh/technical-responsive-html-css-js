@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+html, body {
+    height: 100%;
+}
+
+.fullHeight{
+    height: 100%;
+}
+
+.fullHeightScreen{
+    height: 100dvh;
+}
+
+.container {
+    padding: 0 16px;
+}
+
+.outer_spacing_10 {
+    gap: 10px;
+}
+
+.flex {
+    display: flex;
+}
+
+.alignItemCenter{
+    align-items: center;
+}
+.justifyContentCenter{
+    justify-content: center;
+}
+
+.flexColumn {
+    flex-direction: column;
+}
+
+.fullWidth {
+    width: 100%;
+}
+
+:is(.header, .footer, .innerHeader, .innerFooter) {
+    background-color: #000;
+    padding: 10px;
+    color: #fff;
+}
+
+:is(.innerHeader, .innerFooter) {
+    background-color: cadetblue;
+}
+
+.mainContent {
+    height: calc(100vh - 116px); /* Changed 100dvh to 100vh */
+    padding: 10px;
+    display: grid;
+    gap: 20px;
+    background-color: cornflowerblue;
+}
+
+.mainContent .leftSidebar {
+    width: 20%;
+    background-color: aqua;
+}
+
+.mainContent .rightContent {
+    width: 20%; /* Set to 20% to match left sidebar */
+    background-color: cyan;
+}
+
+.middleContent {
+    flex-grow: 1; /* Allow middleContent to take remaining space */
+    background-color: lightyellow; /* Optional: to visualize */
+}
+
+:is(.mainContent .leftSidebar, .mainContent .middleContent,.mainContent .rightContent) {
+    padding: 20px;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 767px) {
+    .innerContent {
+        flex-direction: column; /* Stack items in a column */
+    }
+
+    :is(.mainContent .leftSidebar,.mainContent .middleContent,.mainContent .rightContent){
+        width: 100%;
+    }
+}
