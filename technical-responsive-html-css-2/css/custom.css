@@ -1,0 +1,77 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+}
+
+input{
+    caret-color: blueviolet;
+}
+
+.inputradio{
+    accent-color: red;
+}
+
+.box{
+    width: 100px;
+    height: 100px;
+    pointer-events: none;
+    border: 1px solid blue;
+}
+
+p{
+    user-select: auto;
+}
+
+.backdropfilerBlock{
+    width: 200px;
+    height: 150px;
+    background: url('https://img.freepik.com/free-vector/watercolor-colorful-butterfly-background_23-2150127741.jpg') no-repeat center/cover;
+    position: relative;
+}
+
+.backdropfilerBlock > span{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: rgba(255,255,255,.2);
+    backdrop-filter: blur(10px);
+    padding: 40px 10px;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.listSnapScroll{
+    height: 100dvh;
+    overflow: auto;
+    scroll-snap-type: y mandatory; /* Scroll snapping on vertical axis */
+}
+
+.listSnapScroll li{
+    scroll-snap-align: start;
+    padding: 20px;
+    
+    margin:0 0 10px;
+    height: 100%;
+}
+
+.listSnapScroll li:nth-child(odd){
+    background-color: burlywood;
+}
+.listSnapScroll li:nth-child(even){
+    background-color: cadetblue;
+}
+
+.mediaBlock {
+}
+
+.mediaBlock .thumb .imgWall{
+    shape-outside: polygon(50% 0%, 100% 100%, 0% 100%); /* Triangular shape */
+    display: block;
+    float: left;
+}
