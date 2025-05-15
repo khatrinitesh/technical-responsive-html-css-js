@@ -1,0 +1,55 @@
+@font-face {
+    font-family: 'plutobold';
+    src: url('../fonts/plutobold.eot');
+    src: url('../fonts/plutobold.eot') format('embedded-opentype'),
+         url('../fonts/plutobold.woff2') format('woff2'),
+         url('../fonts/plutobold.woff') format('woff'),
+         url('../fonts/plutobold.ttf') format('truetype'),
+         url('../fonts/plutobold.svg#plutobold') format('svg');
+}
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+}
+
+:root{
+    --ffPluto:'plutobold';
+}
+
+html,body{
+    height: 100%;
+    min-height: 100%;
+}
+
+body{
+    background-color: #F9F9F9;
+    font-family: var(--ffPluto);
+}
+
+.container{
+    max-width: 1200px;
+    margin:0 auto;
+    padding:0 16px;
+}
+
+.wrapper{
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    height: 100dvh;
+}
+
+.header,.footer{
+    background-color: #232323;
+    padding: 10px;
+    color:#fff;
+}
+
+.mainContent{
+    padding:30px 0;
+    background-color: #e89654;
+}
