@@ -1,0 +1,43 @@
+html,body{
+    height: 100dvh;
+    min-height: 100dvh;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f7f9fc;
+  color: #333;
+}
+
+header {
+  background-color: #0070f3;
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+section {
+  padding: 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+.skills ul {
+  list-style: square;
+  padding-left: 20px;
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  background: #eaeaea;
+  font-size: 0.9rem;
+}
+
+.appLayout{
+    display: grid;
+    height: 100dvh;
+    grid-template-rows: auto 1fr auto;
+}
