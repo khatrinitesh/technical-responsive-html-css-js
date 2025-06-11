@@ -1,0 +1,1142 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+/* Poppins Regular */
+@font-face {
+  font-family: "poppinsR";
+  src: url("./fonts/poppins-regular.eot"); /* IE9 Compat Modes */
+  src: url("./fonts/poppins-regular.eot?#iefix") format("embedded-opentype"),
+    /* IE6-IE8 */ url("./fonts/poppins-regular.woff2") format("woff2"),
+    /* Super Modern Browsers */ url("./fonts/poppins-regular.woff")
+      format("woff"),
+    /* Modern Browsers */ url("./fonts/poppins-regular.ttf") format("truetype"),
+    /* Safari, Android, iOS */ url("./fonts/poppins-regular.svg#Poppins")
+      format("svg"); /* Legacy iOS */
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Poppins Semibold */
+@font-face {
+  font-family: "PoppinsSB";
+  src: url("./fonts/poppins-semibold.eot"); /* IE9 Compat Modes */
+  src: url("./fonts/poppins-semibold.eot?#iefix") format("embedded-opentype"),
+    url("./fonts/poppins-semibold.woff2") format("woff2"),
+    url("./fonts/poppins-semibold.woff") format("woff"),
+    url("./fonts/poppins-semibold.ttf") format("truetype"),
+    url("./fonts/poppins-semibold.svg#Poppins") format("svg");
+  font-weight: 600;
+  font-style: normal;
+}
+
+html,
+.bodyWrapper,
+.rootWrapper {
+  min-height: 100vh;
+  height: 100vh;
+}
+
+:root {
+  --fontBase: 2vh;
+  --pageTop: 0;
+  --actualViewPortHeight: 0;
+  --visualViewportWidth: 0;
+  --headerHeight: 0;
+  /* color theme palette */
+  --bgbody: #fffcf9;
+  --bgColor1: #03213c;
+  --bgColor2: #ffffff;
+  --bgColor3: #000000;
+  --txtColor1: #ffffff;
+  --txtColor2: #000000;
+  --txtColor3: #03213c;
+  --placeHolderColor: #babcbe;
+  --disableBgColor: #727177;
+  --colorTransperent1: rgba(0, 0, 0, 0.5);
+  /* font family */
+  --ffpoppinsR: "poppinsR";
+  --ffpoppinsSB: "poppinsSB";
+  /* font size */
+  --font1: 0.0625rem;
+  --font2: 0.125rem;
+  --font4: 0.25rem;
+  --font8: 0.5rem;
+  --font10: 0.625rem;
+  --font12: 0.75rem;
+  --font14: 0.875rem;
+  --font16: 1rem;
+  --font18: 1.125rem;
+  --font20: 1.25rem;
+  --font22: 1.375rem;
+  --font24: 1.5rem;
+  --font26: 1.625rem;
+  --font28: 1.75rem;
+  --font30: 1.875rem;
+  --font32: 2rem;
+  --font34: 2.125rem;
+  --font36: 2.25rem;
+  --font38: 2.375rem;
+  --font40: 2.5rem;
+  --font42: 2.625rem;
+  --font44: 2.75rem;
+  --font46: 2.875rem;
+  --font48: 3rem;
+  --font50: 3.125rem;
+  --font52: 3.25rem;
+  --font54: 3.375rem;
+  --font56: 3.5rem;
+  --font58: 3.625rem;
+  --font60: 3.75rem;
+  --font62: 3.875rem;
+  --font64: 4rem;
+  --font66: 4.125rem;
+  --font68: 4.25rem;
+  --font70: 4.375rem;
+  --font72: 4.5rem;
+  --font74: 4.625rem;
+  --font76: 4.75rem;
+  --font78: 4.875rem;
+  --font80: 5rem;
+  --font82: 5.125rem;
+  --font84: 5.25rem;
+  --font86: 5.375rem;
+  --font88: 5.5rem;
+  --font90: 5.625rem;
+  --font92: 5.75rem;
+  --font94: 5.875rem;
+  --font96: 6rem;
+  --font98: 6.125rem;
+  --font100: 6.25rem;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  border-radius: 10px;
+  background-color: transparent;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: var(--bgColor1);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: var(--bgColor2);
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+.bodyWrapper {
+  min-height: 100dvh;
+  height: 100dvh;
+  position: relative;
+  font-size: var(--fontBase);
+  font-family: var(--ffpoppinsR);
+  /* background-color: var(--bgbody); */
+  background: url("https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1350&q=80")
+    no-repeat center center/cover;
+}
+a img {
+  margin: 0 auto;
+  display: block;
+}
+
+.container {
+  padding: 0 1rem;
+}
+:is(.header, .footer) {
+  background-color: var(--bgColor3);
+  padding: 20px 0;
+  color: var(--txtColor1);
+}
+
+.appLayout {
+  background-color: var(--bgColor1);
+  height: 100dvh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+.animated-bg {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+  color: white;
+  text-align: center;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.my-table {
+  width: 50%;
+  border-collapse: collapse;
+  margin: 50px auto;
+  font-family: sans-serif;
+}
+
+caption {
+  caption-side: top; /* You can also use 'bottom' */
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+th,
+td {
+  border: 1px solid #333;
+  padding: 10px;
+  text-align: center;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input[type="text"] {
+  padding: 10px 15px;
+  font-size: 1rem;
+  height: 5vh;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  caret-color: #e91e63; /* 👈 Caret (cursor) color */
+}
+
+input[type="text"]:focus {
+  border-color: #e91e63;
+  outline: none;
+}
+
+.boxClip {
+  width: 200px;
+  height: 200px;
+  background-image: url("https://picsum.photos/300");
+  background-size: cover;
+  background-position: center;
+  transition: all 0.5s ease-in-out;
+}
+
+/* Circle Shape */
+.clip-circle {
+  clip-path: circle(50% at 50% 50%);
+}
+
+/* Polygon (Hexagon) Shape */
+.clip-polygon {
+  clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+}
+
+/* Inset (Rectangle with padding) */
+.clip-inset {
+  clip-path: inset(20px 30px);
+}
+
+.multicolumn-text {
+  column-count: 3; /* 👈 Number of columns */
+  column-gap: 30px; /* 👈 Space between columns */
+  column-rule: 10px solid #ccc; /* Optional divider line */
+  column-rule-color: orange;
+  column-rule-style: dotted;
+  column-rule-width: 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.column-box {
+  background: #fff;
+  padding: 20px;
+  column-count: 2;
+  column-gap: 30px;
+  height: 300px; /* Required to see column-fill effect clearly */
+  overflow: hidden;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+/* Balanced content across both columns */
+.balance {
+  column-fill: balance;
+}
+
+/* Fills left column first, then overflows to next */
+.auto {
+  column-fill: auto;
+}
+
+.multi-column {
+  column-count: 3;
+  column-gap: 30px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.full-span {
+  column-span: all; /* 👈 Span across all columns */
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 10px;
+}
+
+.card-container {
+  container-type: inline-size; /* Enables container query based on width */
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+  background: #f0f0f0;
+}
+
+/* Base card style */
+.card {
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  font-family: sans-serif;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+/* Container query: apply styles when container is at least 400px wide */
+@media (min-width: 992px) {
+  .card {
+    background: #e0f7fa;
+    border-left: 5px solid #00796b;
+  }
+}
+
+/* Container query: apply styles when container is less than 400px wide */
+@media (max-width: 767px) {
+  .card {
+    background: #fff3e0;
+    border-left: 5px solid #ef6c00;
+  }
+}
+
+:is(.quote::before, .quote::after) {
+  font-size: 2rem;
+  color: #555;
+  content: "";
+}
+
+.quote::before {
+  content: "”";
+  margin-left: 5px;
+}
+
+.quote::after {
+  content: "”";
+  margin-left: 5px;
+}
+
+/* Example 2: Add icon before button text */
+.download-btn::before {
+  content: "⬇️ ";
+  font-size: 1.2rem;
+}
+
+/* 1. Initialize the counter */
+.steps {
+  counter-reset: step-counter; /* 👈 start from 0 */
+}
+
+/* 2. Each .step increments the counter */
+.step {
+  counter-increment: step-counter;
+  margin-bottom: 15px;
+  padding-left: 40px;
+  position: relative;
+  background: #fff;
+  padding: 10px 15px;
+  border-left: 4px solid #0077cc;
+  border-radius: 4px;
+  display: flex;
+  gap: 20px;
+}
+
+/* 3. Add the counter number using ::before */
+.step::before {
+  content: counter(step-counter) ". ";
+  position: relative;
+  left: 10px;
+  font-weight: bold;
+  color: #0077cc;
+}
+
+.list {
+  counter-reset: my-counter;
+}
+
+/* 2. Increment normally */
+.item {
+  counter-increment: my-counter;
+  position: relative;
+  margin: 10px 0;
+  padding-left: 40px;
+  background: #fff;
+  border-left: 4px solid #007acc;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+/* 3. Show the number using ::before */
+.item::before {
+  content: counter(my-counter) ". ";
+  color: #007acc;
+  font-weight: bold;
+}
+
+/* 4. Override counter at this point */
+.set-to-10 {
+  counter-set: my-counter 10;
+}
+
+@counter-style stars {
+  system: cyclic;
+  symbols: "⭐" "🌟" "✨";
+  suffix: " ";
+}
+
+ul.custom-stars {
+  list-style: stars;
+  padding-left: 20px;
+}
+
+.default {
+  cursor: default;
+  padding: 20px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+
+.pointer {
+  cursor: pointer; /* Hand cursor (common for buttons/links) */
+  padding: 20px;
+  border: 1px solid #007bff;
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+.text {
+  cursor: text; /* I-beam cursor (text selection) */
+  padding: 20px;
+  border: 1px solid #28a745;
+  color: #28a745;
+  margin-bottom: 10px;
+}
+
+.wait {
+  cursor: wait; /* Hourglass or spinner (waiting) */
+  padding: 20px;
+  border: 1px solid #ffc107;
+  color: #856404;
+  margin-bottom: 10px;
+}
+
+.custom {
+  cursor: url("https://cdn-icons-png.flaticon.com/512/32/32339.png"), auto; /* Custom image cursor */
+  padding: 20px;
+  border: 1px solid #dc3545;
+  color: #dc3545;
+  margin-bottom: 10px;
+}
+
+/* custom checkbox and radio - accent color */
+input[type="checkbox"],
+input[type="radio"] {
+  width: 20px;
+  height: 20px;
+  accent-color: #4caf50; /* Green accent */
+  margin-right: 10px;
+}
+
+input[type="range"] {
+  accent-color: #ff5722; /* Orange accent */
+  width: 200px;
+}
+
+progress {
+  accent-color: #2196f3; /* Blue accent */
+  width: 200px;
+  height: 20px;
+}
+
+.boxAnimation {
+  width: 100px;
+  height: 100px;
+  background-color: #3498db;
+  margin: 40px auto;
+  border-radius: 10px;
+  animation: moveAndColor 4s ease-in-out 1s infinite alternate forwards running;
+}
+
+@keyframes moveAndColor {
+  0% {
+    transform: translateX(0);
+    background-color: #3498db;
+  }
+  50% {
+    transform: translateX(200px);
+    background-color: #e74c3c;
+  }
+  100% {
+    transform: translateX(0);
+    background-color: #3498db;
+  }
+}
+
+.boxAspectRatio {
+  width: 300px;
+  aspect-ratio: 16 / 9; /* width to height ratio */
+  background-color: #4caf50;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  border-radius: 8px;
+  margin: 20px auto;
+}
+
+.square {
+  width: 200px;
+  aspect-ratio: 1 / 1; /* perfect square */
+  background-color: #2196f3;
+  margin: 20px auto;
+  border-radius: 8px;
+}
+
+.frosted {
+  width: 300px;
+  margin: 100px auto;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  color: #fff;
+  text-align: center;
+
+  /* Backdrop filter for blur */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); /* Safari support */
+
+  /* Optional: add subtle border */
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.scene {
+  width: 200px;
+  height: 200px;
+  perspective: 600px; /* Needed for 3D effect */
+  margin: 50px auto;
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d; /* Enable 3D transforms */
+  transition: transform 1s;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: rotateY(180deg);
+}
+
+.card__face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden; /* Hide back face when flipped */
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: white;
+}
+
+.card__face--front {
+  background-color: #2980b9;
+}
+
+.card__face--back {
+  background-color: #e74c3c;
+  transform: rotateY(180deg);
+}
+
+.section {
+  height: 300px;
+  background-image: url("https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1350&q=80");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+}
+
+.scroll {
+  background-attachment: scroll;
+  border: 3px solid #3498db;
+}
+
+.fixed {
+  background-attachment: fixed;
+  border: 3px solid #e74c3c;
+}
+
+.local {
+  background-attachment: local;
+  border: 3px solid #2ecc71;
+  overflow: auto;
+  padding: 20px;
+  max-height: 300px;
+}
+
+.blend-box {
+  width: 400px;
+  height: 250px;
+  margin: 40px auto;
+  border-radius: 12px;
+  color: white;
+  font-family: Arial, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  text-align: center;
+
+  /* Two background layers: image + color */
+  background-image: url("https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80"),
+    linear-gradient(rgba(255, 0, 0, 0.6), rgba(0, 0, 255, 0.6));
+
+  background-size: cover;
+  background-position: center;
+
+  /* Blend the backgrounds */
+  background-blend-mode: multiply;
+}
+
+.box {
+  width: 300px;
+  height: 150px;
+  margin: 40px auto;
+  padding: 20px;
+  border: 10px solid #333;
+  color: white;
+  font-family: Arial, sans-serif;
+  font-size: 1.5rem;
+  text-align: center;
+  background-image: linear-gradient(45deg, #ff6f61, #de3c4b);
+  background-size: cover;
+}
+
+/* Background clipped to border-box (default) */
+.border-box {
+  background-clip: border-box;
+  margin-bottom: 40px;
+}
+
+/* Background clipped to padding-box (background doesn’t paint under border) */
+.padding-box {
+  background-clip: padding-box;
+  margin-bottom: 40px;
+}
+
+/* Background clipped to content-box (background painted only inside content) */
+.content-box {
+  background-clip: content-box;
+}
+
+/* For visibility of content-box clipping, set background color on padding */
+.content-box {
+  padding: 40px;
+  background-clip: content-box;
+  background-origin: padding-box; /* ensures background positioning starts at padding box */
+}
+
+.boxTwo {
+  width: 300px;
+  height: 150px;
+  padding: 20px;
+  border: 10px solid #333;
+  background-image: url("https://via.placeholder.com/150");
+  background-repeat: no-repeat;
+  background-size: 100px;
+  background-position: top left;
+  margin: 40px auto;
+  font-family: sans-serif;
+  font-size: 1.1rem;
+  color: #fff;
+  background-color: #4caf50;
+}
+
+.border-box {
+  background-origin: border-box;
+}
+
+.padding-box {
+  background-origin: padding-box;
+}
+
+.content-box {
+  background-origin: content-box;
+}
+.boxBgPosition {
+  width: 300px;
+  height: 200px;
+  border: 2px solid #ccc;
+  margin: 20px auto;
+  background-image: url("https://place.abh.ai/s3fs-public/placeholder/things2_640x480.jpeg");
+  background-repeat: no-repeat;
+  background-color: #f0f0f0;
+  background-size: auto;
+}
+
+.top-left {
+  background-position: top left;
+}
+
+.top-right {
+  background-position: top right;
+}
+
+.center {
+  background-position: center center;
+}
+
+.bottom-left {
+  background-position: bottom left;
+}
+
+.bottom-right {
+  background-position: bottom right;
+}
+
+.custom {
+  background-position: 40px 60px; /* X (horizontal), Y (vertical) */
+}
+
+.boxBgRepeat {
+  width: 300px;
+  height: 200px;
+  border: 2px solid #333;
+  margin: 20px auto;
+  background-image: url("https://thumbs.dreamstime.com/b/spring-wallpaper-creating-award-winning-photograph-pic-encapsulates-timeless-beauty-tranquility-nature-351383535.jpg");
+  background-color: #f0f0f0;
+}
+
+.repeat {
+  background-repeat: repeat; /* repeats both horizontally and vertically (default) */
+}
+
+.repeat-x {
+  background-repeat: repeat-x; /* repeats only horizontally */
+}
+
+.repeat-y {
+  background-repeat: repeat-y; /* repeats only vertically */
+}
+
+.no-repeat {
+  background-repeat: no-repeat; /* shows image only once */
+  background-position: center;
+}
+
+.round {
+  background-repeat: round; /* stretches to fit whole area */
+}
+
+.space {
+  background-repeat: space; /* evenly spaces images, no cropping */
+}
+
+.boxBgSize {
+  width: 300px;
+  height: 200px;
+  margin: 20px auto;
+  border: 2px solid #ccc;
+  background-image: url("https://thumbs.dreamstime.com/b/spring-wallpaper-creating-award-winning-photograph-pic-encapsulates-timeless-beauty-tranquility-nature-351383535.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #f0f0f0;
+  font-family: sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.auto {
+  background-size: auto; /* default size */
+}
+
+.cover {
+  background-size: cover; /* fills box, keeps aspect ratio, may crop */
+}
+
+.contain {
+  background-size: contain; /* scales to fit box fully, may leave space */
+}
+
+.specific {
+  background-size: 150px 100px; /* custom width and height */
+}
+
+.percentage {
+  background-size: 100% 100%; /* stretches to fill box exactly */
+}
+
+.boxBlockSize {
+  inline-size: 200px; /* Logical width (same as width in LTR) */
+  block-size: 150px; /* Logical height (same as height in LTR) */
+  background-color: #4caf50;
+  color: white;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px auto;
+  writing-mode: horizontal-tb; /* Default: top-to-bottom text */
+}
+
+.vertical-box {
+  writing-mode: vertical-rl; /* Top-to-bottom, right-to-left */
+  block-size: 200px; /* In vertical mode, this controls width */
+  inline-size: 100px;
+  background-color: #2196f3;
+}
+
+.borderBox {
+  writing-mode: horizontal-tb; /* Top-to-bottom (default for English) */
+  padding: 20px;
+  margin: 30px auto;
+  width: 300px;
+  font-family: sans-serif;
+  font-size: 1.1rem;
+  background-color: #f9f9f9;
+
+  /* Logical border on block-start (top) and block-end (bottom) */
+  border-block: 4px solid #4caf50;
+}
+
+.vertical {
+  writing-mode: vertical-rl; /* Top-to-bottom (right-to-left) */
+  border-block: 4px dashed #2196f3;
+}
+
+table {
+  width: 80%;
+  margin: 20px auto;
+  border: 2px solid #333;
+  font-family: sans-serif;
+  font-size: 1rem;
+}
+
+th,
+td {
+  border: 2px solid #4caf50;
+  padding: 10px;
+  text-align: center;
+}
+
+.collapse {
+  border-collapse: collapse;
+}
+
+.separate {
+  border-collapse: separate;
+  border-spacing: 10px; /* adds space between cells */
+}
+
+.BoxRadius {
+  width: 250px;
+  height: 150px;
+  background-color: #4caf50;
+  margin: 40px auto;
+  color: white;
+  font-family: sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  writing-mode: horizontal-tb; /* default */
+  direction: ltr; /* default */
+  border-end-end-radius: 40px;
+}
+
+.rtl-box {
+  direction: rtl;
+  background-color: #2196f3;
+}
+
+.reflect {
+  font-size: 2rem;
+  color: #0d6efd;
+  font-weight: bold;
+  text-align: center;
+  margin: 100px auto;
+  width: fit-content;
+  -webkit-box-reflect: below 0px; /* simple reflection */
+  -webkit-box-reflect: below 10px
+    linear-gradient(transparent, rgba(255, 255, 255, 0.5));
+}
+
+.boxShadow {
+  width: 200px;
+  height: 120px;
+  background: white;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #333;
+  text-align: center;
+  box-shadow: none;
+  transition: box-shadow 0.3s ease;
+}
+
+.shadow1 {
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.shadow2 {
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+.shadow3 {
+  box-shadow: 0 0 15px 5px rgba(0, 0, 255, 0.3);
+}
+
+.shadow-inset {
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+.shadow-multiple {
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2), -3px -3px 5px rgba(0, 0, 0, 0.1);
+}
+
+.wrapperContent {
+  columns: 2;
+  column-gap: 30px;
+  width: 80%;
+  margin: 30px auto;
+  font-family: sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+.wrapperContent h2 {
+  break-after: column; /* Force column break after headings */
+  background: #4caf50;
+  color: white;
+  padding: 8px;
+  margin-top: 40px;
+  border-radius: 4px;
+}
+
+.wrapperContent p {
+  margin-bottom: 20px;
+}
+
+.wrapperBreak {
+  columns: 2;
+  column-gap: 40px;
+  width: 80%;
+  margin: 2rem auto;
+  font-family: sans-serif;
+  font-size: 1.1rem;
+}
+
+h2 {
+  break-before: column;
+  break-after: avoid;
+  background: #4caf50;
+  color: white;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.card {
+  break-inside: avoid;
+  background: #e3f2fd;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid #90caf9;
+  border-radius: 5px;
+}
+
+p.ex1 {
+  display: none;
+}
+
+p.ex2 {
+  display: inline;
+  background-color: #e3f2fd;
+  padding: 4px;
+}
+
+p.ex3 {
+  display: block;
+  background-color: #c8e6c9;
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
+p.ex4 {
+  display: inline-block;
+  background-color: #ffe082;
+  padding: 8px;
+}
+
+.boxDir {
+  width: 80%;
+  margin: 20px auto;
+  padding: 15px;
+  border: 2px solid #333;
+  font-size: 1.2rem;
+  background-color: #f1f1f1;
+}
+
+.ltr {
+  direction: ltr;
+  text-align: left;
+}
+
+.rtl {
+  direction: rtl;
+  text-align: right;
+  background-color: #e0f7fa;
+}
+
+.show-empty {
+  empty-cells: show;
+}
+
+.hide-empty {
+  empty-cells: hide;
+}
+
+.blur {
+  filter: blur(4px);
+}
+
+.grayscale {
+  filter: grayscale(100%);
+}
+
+.hue-rotate {
+  filter: hue-rotate(90deg);
+}
+
+.multi {
+  filter: brightness(1.2) contrast(120%) sepia(0.4);
+}
+
+.containerFlex {
+  display: flex;
+  flex-direction: row; /* row | column */
+  flex-wrap: wrap; /* wrap | nowrap */
+  flex-flow: row wrap; /* shorthand for direction + wrap */
+  gap: 1rem;
+  padding: 20px;
+  background: #f0f0f0;
+}
+
+.boxFlex {
+  flex-grow: 1; /* allow items to grow equally */
+  flex-shrink: 1; /* allow items to shrink if needed */
+  flex-basis: 150px; /* starting width */
+  background-color: #4caf50;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  border-radius: 6px;
+  font-size: 1.2rem;
+}
+
+.boxFlex.special {
+  flex: 2 1 200px; /* grow 2x, shrink 1x, basis 200px */
+  background-color: #2196f3;
+}
+
+.containerFloat {
+  width: 80%;
+  margin: auto;
+  font-family: sans-serif;
+}
+
+.containerFloat .float-left {
+  float: left;
+  width: 150px;
+  margin: 0 15px 15px 0;
+  background: #c8e6c9;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+.containerFloat .float-right {
+  float: right;
+  width: 150px;
+  margin: 0 0 15px 15px;
+  background: #bbdefb;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}

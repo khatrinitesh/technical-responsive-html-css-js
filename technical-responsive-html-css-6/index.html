@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- BELOW META -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- BELOW TITLE NAME -->
+    <title>TechnicalResponsie HTML+CSS+JS</title>
+    <!-- BELOW CSS EXTERNAL LINK WITH LIBRARY AND CUSTOM -->
+    <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="css/custom.css">
+</head>
+
+<body class="bodyWrapper">
+
+    <div class="appLayout">
+        <!-- s > header -->
+        <header class="header">
+            <div class="container">
+                header
+            </div>
+        </header>
+        <!-- e > header -->
+        <!-- s > mainlayout -->
+        <div class="mainContent">
+            <div class="container">
+                <div class="animated-bg">
+                    <h1>Welcome to My Website</h1>
+                </div>
+                <table class="my-table">
+                    <caption>Monthly Sales Report</caption>
+                    <thead>
+                        <tr>
+                            <th>Month</th>
+                            <th>Sales</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>January</td>
+                            <td>$10,000</td>
+                        </tr>
+                        <tr>
+                            <td>February</td>
+                            <td>$12,000</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="form-container">
+                    <label for="name">Your Name:</label>
+                    <input type="text" id="name" placeholder="Type here..." />
+                </div>
+                <div class="boxClip clip-circle"></div>
+                <div class="boxClip clip-polygon"></div>
+                <div class="boxClip clip-inset"></div>
+                <div class="multicolumn-text">
+                    <h2>CSS Multi-column Layout</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nec lacus vitae
+                        arcu dapibus aliquet. Pellentesque habitant morbi tristique senectus et netus et
+                        malesuada fames ac turpis egestas. Sed nec justo vitae metus faucibus faucibus.
+                    </p>
+                    <p>
+                        Aliquam erat volutpat. Praesent malesuada orci nec dui varius, a blandit augue
+                        fermentum. Maecenas et tellus nec magna dapibus fringilla. Integer posuere eu
+                        libero vel congue.
+                    </p>
+                    <p>
+                        Nulla facilisi. Donec vehicula gravida justo at efficitur. Morbi vel tortor sed
+                        nulla eleifend gravida at eget massa.
+                    </p>
+                </div>
+                <div class="column-box balance">
+                    <h2>Balanced Columns</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+                    <p>Phasellus ut quam ac sapien elementum facilisis...</p>
+                    <p>Nullam luctus lacus ut massa tincidunt, ac imperdiet magna iaculis...</p>
+                    <p>Maecenas rhoncus, nisi sed gravida porta, turpis sem fermentum sem...</p>
+                </div>
+
+                <div class="column-box auto">
+                    <h2>Auto Fill Columns</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+                    <p>Phasellus ut quam ac sapien elementum facilisis...</p>
+                    <p>Nullam luctus lacus ut massa tincidunt, ac imperdiet magna iaculis...</p>
+                    <p>Maecenas rhoncus, nisi sed gravida porta, turpis sem fermentum sem...</p>
+                </div>
+                <div class="multi-column">
+                    <h2 class="full-span">Featured Articles</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum dignissim cursus ligula...
+                    </p>
+                    <p>Phasellus at sapien quis neque feugiat sodales. Curabitur tincidunt nisi at ex placerat...</p>
+                    <p>Donec sed lorem a nisl dignissim tincidunt sed eget eros. Vivamus sed justo sit amet justo...</p>
+                    <p>Sed at diam facilisis, commodo nulla id, malesuada ex. Integer laoreet blandit odio...</p>
+                </div>
+                <div class="card-container">
+                    <div class="card">
+                        <h2>Responsive Card</h2>
+                        <p>This card changes layout based on its container size, not the window size.</p>
+                    </div>
+                </div>
+
+                <div class="quote">
+                    Life is what happens when you're busy making other plans.
+                </div>
+
+                <button class="download-btn">Download</button>
+
+                <div class="steps">
+                    <div class="step">Sign Up</div>
+                    <div class="step">Verify Email</div>
+                    <div class="step">Complete Profile</div>
+                    <div class="step">Start Using</div>
+                </div>
+
+                <div class="list">
+                    <div class="item">Item One</div>
+                    <div class="item">Item Two</div>
+                    <div class="item set-to-10">Item Ten (custom set)</div>
+                    <div class="item">Item Eleven</div>
+                </div>
+
+                <h2>Custom Counter Style: Stars</h2>
+                <ul class="custom-stars">
+                    <li>First item</li>
+                    <li>Second item</li>
+                    <li>Third item</li>
+                    <li>Fourth item</li>
+                </ul>
+                <div class="default">Default cursor</div>
+                <div class="pointer">Pointer cursor (hand)</div>
+                <div class="text">Text cursor (I-beam)</div>
+                <div class="wait">Wait cursor (hourglass)</div>
+                <div class="custom">Custom image cursor</div>
+                <h2>Accent Color Demo</h2>
+
+                <label>
+                    <input type="checkbox" />
+                    Accept Terms
+                </label>
+                <br /><br />
+
+                <label>
+                    <input type="radio" name="gender" />
+                    Male
+                </label>
+                <label>
+                    <input type="radio" name="gender" />
+                    Female
+                </label>
+                <br /><br />
+
+                <label>
+                    Volume:
+                    <input type="range" min="0" max="100" value="50" />
+                </label>
+                <br /><br />
+
+                <progress value="70" max="100"></progress>
+
+                <div class="boxAnimation"></div>
+                <div class="boxAspectRatio">16:9 Aspect Ratio</div>
+                <div class="square"></div>
+
+                <div class="frosted">
+                    <h2>Frosted Glass Effect</h2>
+                    <p>This box uses <code>backdrop-filter</code> to blur the background behind it.</p>
+                </div>
+
+                <div class="scene">
+                    <div class="card">
+                        <div class="card__face card__face--front">
+                            Front Side
+                        </div>
+                        <div class="card__face card__face--back">
+                            Back Side
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section scroll">
+                    background-attachment: scroll (default)
+                </div>
+
+                <div class="section fixed">
+                    background-attachment: fixed (parallax effect)
+                </div>
+
+                <div class="section local" contenteditable="true">
+                    background-attachment: local<br />
+                    Scroll this text and see how background behaves with the content.
+                    <br /><br />
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet accumsan tortor.
+                    Curabitur nec leo et nisl sagittis mollis.
+                </div>
+
+
+                <div class="blend-box">
+                    background-blend-mode: multiply
+                </div>
+
+                <div class="boxTwo border-box">
+                    background-clip: border-box (default)
+                </div>
+
+                <div class="boxTwo padding-box">
+                    background-clip: padding-box
+                </div>
+
+                <div class="boxTwo content-box">
+                    background-clip: content-box
+                </div>
+
+
+                <div class="boxBgPosition top-left">top left</div>
+                <div class="boxBgPosition top-right">top right</div>
+                <div class="boxBgPosition center">center center</div>
+                <div class="boxBgPosition bottom-left">bottom left</div>
+                <div class="boxBgPosition bottom-right">bottom right</div>
+                <div class="boxBgPosition custom">40px 60px</div>
+
+                <div class="boxBgRepeat repeat">repeat (default)</div>
+                <div class="boxBgRepeat repeat-x">repeat-x</div>
+                <div class="boxBgRepeat repeat-y">repeat-y</div>
+                <div class="boxBgRepeat no-repeat">no-repeat</div>
+                <div class="boxBgRepeat round">round</div>
+                <div class="boxBgRepeat space">space</div>
+
+                <div class="boxBgSize auto">background-size: auto</div>
+                <div class="boxBgSize cover">background-size: cover</div>
+                <div class="boxBgSize contain">background-size: contain</div>
+                <div class="boxBgSize specific">background-size: 150px 100px</div>
+                <div class="boxBgSize percentage">background-size: 100% 100%</div>
+
+                <div class="boxBlockSize">block-size: 150px</div>
+
+                <div class="boxBlockSize vertical-box">vertical block-size: 200px</div>
+
+                <div class="borderBox">
+                    This box uses <code>border-block</code><br>
+                    (applies to top and bottom)
+                </div>
+
+                <div class="borderBox vertical">
+                    This uses vertical writing mode<br>
+                    <code>border-block</code> now applies to right and left
+                </div>
+
+
+                <table class="collapse">
+                    <tr>
+                        <th>Header 1</th>
+                        <th>Header 2</th>
+                    </tr>
+                    <tr>
+                        <td>Cell A</td>
+                        <td>Cell B</td>
+                    </tr>
+                </table>
+
+                <h2 style="text-align:center;">border-collapse: separate</h2>
+                <table class="separate">
+                    <tr>
+                        <th>Header 1</th>
+                        <th>Header 2</th>
+                    </tr>
+                    <tr>
+                        <td>Cell A</td>
+                        <td>Cell B</td>
+                    </tr>
+                </table>
+
+                <div class="BoxRadius">
+                    LTR: Rounded Bottom Right
+                </div>
+
+                <div class="BoxRadius rtl-box">
+                    RTL: Rounded Bottom Left
+                </div>
+
+                <div class="reflect">Reflected Text</div>
+
+                <div class="boxShadow shadow1">Simple Shadow</div>
+                <div class="boxShadow shadow2">Soft Shadow</div>
+                <div class="boxShadow shadow3">Glow Effect</div>
+                <div class="boxShadow shadow-inset">Inset Shadow</div>
+                <div class="boxShadow shadow-multiple">Multiple Shadows</div>
+
+                <div class="wrapperContent">
+                    <h2>Section 1</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed facilisis, erat at pretium posuere,
+                        ligula risus lobortis libero, nec posuere nisl erat sed nisl.</p>
+                    <p>Praesent rutrum enim nec dui egestas, in rutrum metus aliquet.</p>
+
+                    <h2>Section 2</h2>
+                    <p>Donec nec urna eu ipsum fermentum faucibus. Integer dapibus tortor nec elit feugiat, non laoreet
+                        justo luctus.</p>
+                    <p>Aliquam erat volutpat. Nulla facilisi.</p>
+                </div>
+
+                <div class="wrapperBreak">
+                    <h2>Column 1 Header</h2>
+
+                    <div class="card">
+                        <p>This box should not break across columns. It uses <code>break-inside: avoid</code>.</p>
+                    </div>
+
+                    <div class="card">
+                        <p>Another card that stays whole inside a column.</p>
+                    </div>
+
+                    <h2>Column 2 Header</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed
+                        cursus ante dapibus diam.</p>
+                </div>
+
+                <p class="ex1">This paragraph uses <code>display: none</code> (invisible)</p>
+
+                <p class="ex2">This paragraph uses <code>display: inline</code>.</p>
+                <p class="ex2">Another inline paragraph.</p>
+
+                <p class="ex3">This paragraph uses <code>display: block</code>.</p>
+
+                <p class="ex4">This paragraph uses <code>display: inline-block</code>.</p>
+                <p class="ex4">Another inline-block paragraph.</p>
+
+                <div class="boxDir ltr">
+                    <strong>LTR (Left to Right):</strong><br>
+                    This is English text flowing from left to right. Useful for most Western languages.
+                </div>
+
+                <div class="boxDir rtl">
+                    <strong>RTL (Right to Left):</strong><br>
+                    هذا نص باللغة العربية يتم عرضه من اليمين إلى اليسار.
+                </div>
+
+                <table class="show-empty">
+                    <caption>empty-cells: show</caption>
+                    <tr>
+                        <td>1</td>
+                        <td></td> <!-- Empty cell -->
+                        <td>3</td>
+                    </tr>
+                </table>
+
+                <table class="hide-empty">
+                    <caption>empty-cells: hide</caption>
+                    <tr>
+                        <td>1</td>
+                        <td></td> <!-- Empty cell -->
+                        <td>3</td>
+                    </tr>
+                </table>
+                <img src="https://images.unsplash.com/photo-1518495973542-4542c06a5843?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bmF0dXJlfGVufDB8fDB8fHww"
+                    alt="original image">
+
+                <h2>Filtered Images</h2>
+                <img src="https://images.unsplash.com/photo-1518495973542-4542c06a5843?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bmF0dXJlfGVufDB8fDB8fHww"
+                    class="blur" alt="blurred">
+                <img src="https://images.unsplash.com/photo-1518495973542-4542c06a5843?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bmF0dXJlfGVufDB8fDB8fHww"
+                    class="grayscale" alt="grayscale">
+                <img src="https://images.unsplash.com/photo-1518495973542-4542c06a5843?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bmF0dXJlfGVufDB8fDB8fHww"
+                    class="hue-rotate" alt="hue-rotated">
+                <img src="https://images.unsplash.com/photo-1518495973542-4542c06a5843?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bmF0dXJlfGVufDB8fDB8fHww"
+                    class="multi" alt="multi filter">
+
+                <div class="containerFlex">
+                    <div class="boxFlex">Box 1</div>
+                    <div class="boxFlex special">Box 2 (flex: 2 1 200px)</div>
+                    <div class="boxFlex">Box 3</div>
+                    <div class="boxFlex">Box 4</div>
+                </div>
+
+                <div class="containerFloat clearfix">
+                    <div class="float-left">Float Left</div>
+                    <div class="float-right">Float Right</div>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus gravida sem sed dolor commodo,
+                        et dictum justo ullamcorper. Sed sodales velit a orci elementum, eget facilisis metus fermentum.
+                        Nullam nec varius justo.
+                    </p>
+                </div>
+
+
+
+
+            </div>
+        </div>
+        <!-- e > mainlayout -->
+        <!-- s > footer -->
+        <footer class="footer">
+            <div class="container">
+                <p>&copy; copyright </p>
+            </div>
+        </footer>
+        <!-- e > footer -->
+    </div>
+
+
+    <!-- BELOW JS EXTERNAL LINK WITH LIBRARY AND CUSTOM -->
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/custom.js"></script>
+</body>
+
+</html>
