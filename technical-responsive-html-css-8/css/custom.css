@@ -1,0 +1,7 @@
+p::first-letter {
+  float: left;
+  font-size: 3rem;
+  line-height: 1;
+  padding-right: 8px;
+  font-weight: bold;
+}

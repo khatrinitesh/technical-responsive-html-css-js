@@ -1,0 +1,33 @@
+.box {
+  background-color: lightblue;
+  padding: 1em;
+  inline-size: 300px; /* Works like width in LTR layout */
+  border: 2px solid #333;
+}
+
+.vertical {
+  writing-mode: vertical-rl;
+  background-color: lightcoral;
+  inline-size: 200px; /* Now applies to vertical width (i.e., height) */
+}
+
+.normal {
+  letter-spacing: normal;
+}
+
+.wide {
+  letter-spacing: 2px;
+}
+
+.wider {
+  letter-spacing: 5px;
+}
+
+.tight {
+  letter-spacing: -1px;
+}
+
+.demo-text {
+  font-size: 24px;
+  margin-bottom: 16px;
+}
